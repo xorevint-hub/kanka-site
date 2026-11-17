@@ -8,18 +8,20 @@
 <meta property="og:title" content="Kanka · Arkadaşların için sesli sohbet">
 <meta property="og:description" content="Sesli oda, 2K 60 fps ekran paylaşımı, yapay zekâ gürültü engelleme. Ücretsiz, Windows.">
 <meta property="og:image" content="https://spiellab.com/img/og.png">
-<meta name="theme-color" content="#000000">
-<link rel="icon" href="img/ikon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0d0a08">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch.png">
+<link rel="preload" href="font/unbounded-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="font/fontlar.css">
 <link rel="stylesheet" href="stil.css">
 </head>
 <body>
-<div class="zemin" aria-hidden="true"><div class="zemin-desen"></div><div class="zemin-isik"></div><div class="imlec-isik"></div></div>
+<div class="zemin" aria-hidden="true"><div class="zemin-cizgi"></div><div class="imlec-isik"></div></div>
 <a class="atla" href="#ana">İçeriğe geç</a>
 
 <header class="ust">
   <div class="kap ust-ic">
-    <a class="logo" href="#" aria-label="Kanka ana sayfa"><img src="img/ikon.svg" width="32" height="32" alt=""><span>Kanka</span></a>
+    <a class="logo" href="#" aria-label="Kanka ana sayfa"><img src="img/logo.png" width="40" height="40" alt=""><span>Kanka</span></a>
     <nav aria-label="Ana menü">
       <a href="#ses">Ses</a>
       <a href="#ekran">Ekran</a>
@@ -32,67 +34,90 @@
 </header>
 
 <main id="ana">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="parilti" aria-hidden="true"></div>
-    <div class="kap hero-ic">
-      <div class="hero-yazi">
-        <p class="rozet"><span class="nokta"></span> Sürüm 1.3.2 · Windows</p>
-        <h1>Ekip toplandı.<br><span class="vurgu-yazi">Kanka</span> açık.</h1>
-        <p class="giris">Arkadaş grubun için sesli oda, özelden sesli ve görüntülü arama, 2K 60 fps ekran paylaşımı ve klavye sesini bile silen yapay zekâ gürültü engelleme. Reklam yok, abonelik yok, sadece siz.</p>
-        <div class="hero-eylem">
+  <!-- GİRİŞ -->
+  <section class="giris">
+    <div class="kap giris-ic">
+      <div class="giris-yazi">
+        <p class="rozet"><span class="nokta"></span> Sürüm 1.3.4 · Windows · Ücretsiz</p>
+        <h1>Ekip toplandı. <span class="vurgu-yazi">Kanka</span> açık.</h1>
+        <p class="giris-metin">Arkadaş grubun için sesli oda, özelden arama, 2K 60 fps ekran paylaşımı ve klavye sesini bile silen gürültü engelleme. Reklam yok, abonelik yok, sadece siz.</p>
+
+        <div class="indir-blok">
           <a class="dugme dugme-buyuk" href="https://152-70-184-135.sslip.io/guncelleme/Kanka-Kurulum.exe" download data-indir>
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Windows için indir
           </a>
-          <a class="dugme-ikincil" href="#ses">Neler var? ↓</a>
+          <p class="kucuk-not">117 MB · Windows 10 / 11 · Güncellemeler kendiliğinden gelir</p>
         </div>
-        <p class="kucuk-not">Ücretsiz · 116 MB · Windows 10 / 11 · Güncellemeler kendiliğinden gelir</p>
+
+        <div class="uyari" role="note" aria-labelledby="uyari-baslik">
+          <div class="uyari-ikon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Zm0 6v5m0 3v.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="uyari-baslik" id="uyari-baslik">İlk açılışta mavi bir Windows uyarısı çıkarsa</p>
+            <p class="uyari-adim"><span class="tus">Ek bilgi</span><span class="ok" aria-hidden="true">→</span><span class="tus tus-dolu">Yine de çalıştır</span></p>
+            <p class="uyari-not">Kanka imzasız küçük bir ekip uygulaması; bu uyarı sadece ilk kurulumda bir kez çıkar.</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Uygulama penceresi (kodla çizilmiş) -->
-      <div class="pencere" role="img" aria-label="Kanka uygulamasının sesli oda ekranı: dört arkadaş konuşuyor, biri ekran paylaşıyor">
-        <div class="pencere-bar"><span></span><span></span><span></span><b>Kanka — Kankalar</b></div>
-        <div class="pencere-ic">
-          <aside class="p-sunucular">
-            <i class="p-sunucu aktif">K</i><i class="p-sunucu">R</i><i class="p-sunucu">+</i>
-          </aside>
-          <aside class="p-kanallar">
-            <b>Kankalar</b>
-            <small>YAZI KANALLARI</small>
-            <span># genel</span><span># medya</span>
-            <small>SES KANALLARI</small>
-            <span class="secili">🔊 Oyun gecesi</span>
-            <em class="kisi k1">Okan</em><em class="kisi k2 konusuyor">Ali</em><em class="kisi k3">Mert</em><em class="kisi k4">Deniz</em>
-            <div class="p-baglanti"><i></i> Ses bağlı · 18 ms</div>
-          </aside>
-          <div class="p-ses">
-            <div class="p-paylasim">
-              <div class="oyun-sahne" aria-hidden="true">
-                <div class="gunes"></div><div class="dag d1"></div><div class="dag d2"></div><div class="yol"></div>
+      <!-- Uygulama penceresi (kodla çizilmiş) + maskot -->
+      <div class="sahne">
+        <img class="kaplan" src="img/kaplan.webp" width="520" height="653" alt="Kanka'nın maskotu: kırmızı şapkalı, kulaklıklı kaplan baş parmağını kaldırıyor">
+        <div class="pencere" role="img" aria-label="Kanka uygulamasının sesli oda ekranı: dört arkadaş konuşuyor, biri ekran paylaşıyor">
+          <div class="pencere-bar"><span></span><span></span><span></span><b>Kanka · Kankalar</b></div>
+          <div class="pencere-ic">
+            <aside class="p-sunucular">
+              <img class="p-sunucu aktif" src="img/favicon.png" width="34" height="34" alt=""><i class="p-sunucu">R</i><i class="p-sunucu">+</i>
+            </aside>
+            <aside class="p-kanallar">
+              <b>Kankalar</b>
+              <small>YAZI KANALLARI</small>
+              <span># genel</span><span># medya</span>
+              <small>SES KANALLARI</small>
+              <span class="secili">Oyun gecesi</span>
+              <em class="kisi k1">Okan</em><em class="kisi k2 konusuyor">Ali</em><em class="kisi k3">Mert</em><em class="kisi k4">Deniz</em>
+              <div class="p-baglanti"><i></i> Ses bağlı · 18 ms</div>
+            </aside>
+            <div class="p-ses">
+              <div class="p-paylasim">
+                <div class="oyun-sahne" aria-hidden="true">
+                  <div class="gunes"></div><div class="dag d1"></div><div class="dag d2"></div><div class="yol"></div>
+                </div>
+                <span class="etiket canli">CANLI</span><span class="etiket alt">Ali · ekran · 2K 60</span>
               </div>
-              <span class="etiket canli">CANLI</span><span class="etiket alt">Ali · ekran · 2K 60</span>
+              <div class="p-kutular">
+                <div class="p-kutu"><i class="av a1">O</i></div>
+                <div class="p-kutu konusan"><i class="av a2">A</i></div>
+                <div class="p-kutu"><i class="av a3">M</i></div>
+                <div class="p-kutu konusan2"><i class="av a4">D</i></div>
+              </div>
+              <div class="p-kontrol"><i></i><i></i><i></i><i class="kapat"></i></div>
             </div>
-            <div class="p-kutular">
-              <div class="p-kutu"><i class="av a1">O</i></div>
-              <div class="p-kutu konusan"><i class="av a2">A</i></div>
-              <div class="p-kutu"><i class="av a3">M</i></div>
-              <div class="p-kutu konusan2"><i class="av a4">D</i></div>
-            </div>
-            <div class="p-kontrol"><i></i><i></i><i></i><i class="kapat"></i></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- RAKAMLAR -->
+  <section class="rakamlar" aria-label="Kanka kısaca">
+    <div class="kap rakam-ic">
+      <div><b>48 kHz</b><span>tam bant gürültü engelleme</span></div>
+      <div><b>1440p · 60</b><span>oyun sesiyle ekran paylaşımı</span></div>
+      <div><b>Doğrudan</b><span>ses arada sunucuda durmaz</span></div>
+      <div><b>0 ₺</b><span>reklamsız, abonelik yok</span></div>
+    </div>
+  </section>
+
   <!-- SES -->
   <section class="bolum" id="ses">
-    <div class="kap ses-izgara">
-      <div>
-        <p class="ust-baslik">Yapay zekâ gürültü engelleme</p>
+    <div class="kap ikili">
+      <div class="metin">
+        <p class="ust-baslik"><span>01</span> Gürültü engelleme</p>
         <h2>Annenin elektrikli süpürgesi bile duyulmaz.</h2>
-        <p>Kanka, mikrofonuna gelen sesi bilgisayarında, 48 kHz tam bantta temizler. Klavye takırtısı, fan, köpek, trafik gider; senin sesin Discord'daki kadar net kalır. Hiçbir şey internete gönderilmez.</p>
+        <p>Kanka mikrofonuna gelen sesi bilgisayarında, 48 kHz tam bantta temizler. Klavye takırtısı, fan, köpek, trafik gider; senin sesin net kalır. Hiçbir şey internete gönderilmez.</p>
         <ul class="tikli">
           <li>DeepFilterNet3 modeli, tam bant 48 kHz</li>
           <li>dB eşikli ses kapısı ve engelleme gücü ayarı</li>
@@ -117,25 +142,28 @@
   <!-- EKRAN -->
   <section class="bolum" id="ekran">
     <div class="kap">
-      <p class="ust-baslik">Ekran paylaşımı</p>
+      <p class="ust-baslik"><span>02</span> Ekran ve kamera</p>
       <h2 class="genis-baslik">2K, 60 fps. Oyunun sesiyle birlikte.</h2>
-      <div class="bento">
-        <article class="kart kart-buyuk">
-          <div class="sayi">1440p<small>60</small></div>
+      <div class="ozellik-liste">
+        <article class="ozellik">
+          <span class="o-no">A</span>
           <h3>Takılmadan izle</h3>
           <p>Ekranını ya da tek bir pencereyi yüksek kalitede paylaş. Bilgisayar sesi de gider; arkadaşların oyunu seninle aynı anda duyar.</p>
         </article>
-        <article class="kart">
+        <article class="ozellik">
+          <span class="o-no">B</span>
+          <h3>Yayın tam ekran</h3>
+          <p>Birinin yayınına tıkla, yayın genişlesin; kişiler alta küçük kareler olarak insin, istersen tamamen gizle.</p>
+        </article>
+        <article class="ozellik">
+          <span class="o-no">C</span>
           <h3>Kamera</h3>
           <p>Sesli odada tek tıkla kamerayı aç, yüz yüze takıl.</p>
         </article>
-        <article class="kart">
-          <h3>Doğrudan bağlantı</h3>
-          <p>Ses ve görüntü arkadaşlarınla aranda doğrudan akar, aracı bir sunucuda durmaz.</p>
-        </article>
-        <article class="kart kart-yatay">
-          <div class="ping"><i></i><i></i><i></i><i></i></div>
-          <div><h3>Ping göstergesi</h3><p>Kimin bağlantısı nasıl, anında gör.</p></div>
+        <article class="ozellik">
+          <span class="o-no">D</span>
+          <h3>Ping göstergesi</h3>
+          <p>Kimin bağlantısı nasıl, anında gör. Ses ve görüntü aranızda doğrudan akar.</p>
         </article>
       </div>
     </div>
@@ -143,43 +171,31 @@
 
   <!-- ÖZEL MESAJ VE ARAMA -->
   <section class="bolum" id="ozel">
-    <div class="kap">
-      <p class="ust-baslik">Yeni · 1.3</p>
-      <h2 class="genis-baslik">Sunucuya gerek yok, özelden ara.</h2>
-      <p>Bir arkadaşınla baş başa konuşmak için oda açmana gerek yok. Özel mesaj at, tek tıkla sesli ya da görüntülü ara.</p>
-      <div class="bento-dm">
-        <article class="kart">
-          <span class="ust-etiket">Özel mesaj</span>
-          <h3>Birebir sohbet</h3>
-          <p>Görsel, dosya, tepki ve yanıt; sadece ikiniz görürsünüz.</p>
-        </article>
-        <article class="kart">
-          <span class="ust-etiket">Arama</span>
-          <h3>Sesli ve görüntülü</h3>
-          <p>Gelen arama penceresi ve zil sesi. Aramadayken kamerayı ya da ekranını aç, cevapsız aramalar kaybolmaz.</p>
-        </article>
-        <article class="kart">
-          <span class="ust-etiket">Hesap</span>
-          <h3>Profil ve kontrol</h3>
-          <p>Profil fotoğrafını koy, şifreni değiştir. Sunucu sahibi üyeyi atabilir ya da engelleyebilir.</p>
-        </article>
+    <div class="kap ikili ters">
+      <div class="arama-kart" role="img" aria-label="Gelen arama penceresi: Ali seni görüntülü arıyor, kabul et ve reddet düğmeleri">
+        <div class="arama-av">A</div>
+        <p class="arama-ad">Ali</p>
+        <p class="arama-durum">görüntülü arıyor…</p>
+        <div class="arama-dugmeler"><span class="ret">Reddet</span><span class="kabul">Kabul et</span></div>
+      </div>
+      <div class="metin">
+        <p class="ust-baslik"><span>03</span> Özel mesaj ve arama</p>
+        <h2>Sunucuya gerek yok, özelden ara.</h2>
+        <p>Bir arkadaşınla baş başa konuşmak için oda açmana gerek yok. Özel mesaj at, tek tıkla sesli ya da görüntülü ara.</p>
+        <dl class="tanimlar">
+          <div><dt>Birebir sohbet</dt><dd>Görsel, dosya, tepki ve yanıt; sadece ikiniz görürsünüz.</dd></div>
+          <div><dt>Sesli ve görüntülü</dt><dd>Zil sesi ve gelen arama penceresi. Aramadayken kamerayı ya da ekranını aç.</dd></div>
+          <div><dt>Profil ve kontrol</dt><dd>Profil fotoğrafı, şifre değiştirme; sunucu sahibi üyeyi atabilir ya da engelleyebilir.</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
   <!-- SUNUCULAR -->
   <section class="bolum" id="sunucu">
-    <div class="kap sunucu-izgara">
-      <div class="sohbet" role="img" aria-label="Kanka yazı kanalı: arkadaşlar mesajlaşıyor, görsel paylaşıyor, tepki veriyor; altta davet kodu kartı">
-        <div class="s-ust"><b># genel</b><span>Kankalar</span></div>
-        <div class="s-mesaj"><i class="av a1">O</i><div><b>Okan <small>21:04</small></b><p>Akşam <mark>@Ali</mark> maç var mı?</p></div></div>
-        <div class="s-mesaj"><i class="av a2">A</i><div><b>Ali <small>21:05</small></b><p>Var tabii, ekranı açıyorum</p><span class="tepki">🔥 3</span> <span class="tepki">😂 1</span></div></div>
-        <div class="s-mesaj"><i class="av a4">D</i><div><b>Deniz <small>21:06</small></b><p class="yanit">↪ Ali: ekranı açıyorum</p><div class="s-gorsel" aria-hidden="true"></div></div></div>
-        <div class="davet"><div><small>DAVET KODU</small><code>KNK-7Q4M</code></div><span class="kopyala">Kopyala</span></div>
-        <div class="s-yaz">#genel kanalına yaz</div>
-      </div>
-      <div>
-        <p class="ust-baslik">Sunucular ve kanallar</p>
+    <div class="kap ikili">
+      <div class="metin">
+        <p class="ust-baslik"><span>04</span> Sunucular ve kanallar</p>
         <h2>Kendi odanı kur, kodu at, gelsinler.</h2>
         <ol class="adimlar">
           <li><b>Sunucu aç.</b> Ekibine bir isim koy.</li>
@@ -187,25 +203,34 @@
           <li><b>Konuşmaya başla.</b> Yazı kanalında dosya, görsel, tepki, yanıt ve @etiket; ses kanalında sohbet.</li>
         </ol>
       </div>
+      <div class="sohbet" role="img" aria-label="Kanka yazı kanalı: arkadaşlar mesajlaşıyor, görsel paylaşıyor, tepki veriyor; altta davet kodu kartı">
+        <div class="s-ust"><b># genel</b><span>Kankalar</span></div>
+        <div class="s-mesaj"><i class="av a1">O</i><div><b>Okan <small>21:04</small></b><p>Akşam <mark>@Ali</mark> maç var mı?</p></div></div>
+        <div class="s-mesaj"><i class="av a2">A</i><div><b>Ali <small>21:05</small></b><p>Var tabii, ekranı açıyorum</p><span class="tepki">🔥 3</span> <span class="tepki">😂 1</span></div></div>
+        <div class="s-mesaj"><i class="av a4">D</i><div><b>Deniz <small>21:06</small></b><p class="yanit">↪ Ali: ekranı açıyorum</p><div class="s-gorsel" aria-hidden="true"></div></div></div>
+        <div class="davet"><div><small>DAVET KODU</small><code>KNK-7Q4M</code></div><span class="kopyala">Kopyala</span></div>
+      </div>
     </div>
   </section>
 
   <!-- İNDİR -->
-  <section class="bolum indir" id="indir">
+  <section class="bolum" id="indir">
     <div class="kap">
       <div class="indir-kart">
-        <img src="img/ikon.svg" width="72" height="72" alt="">
-        <h2>Kanka'yı indir</h2>
-        <p>Bir kere kur, gerisini düşünme. Yeni sürüm çıkınca uygulama kendini günceller.</p>
-        <a class="dugme dugme-buyuk" href="https://152-70-184-135.sslip.io/guncelleme/Kanka-Kurulum.exe" download data-indir>
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Hemen indir
-        </a>
-        <p class="kucuk-not">Sürüm 1.3.2 · 116 MB · Windows 10 / 11 (64 bit)</p>
+        <div class="indir-sol">
+          <img src="img/logo.png" width="96" height="96" alt="Kanka logosu">
+          <h2>Kanka'yı indir, ekibi topla.</h2>
+          <p>Bir kere kur, gerisini düşünme. Yeni sürüm çıkınca uygulama kendini günceller.</p>
+          <a class="dugme dugme-buyuk" href="https://152-70-184-135.sslip.io/guncelleme/Kanka-Kurulum.exe" download data-indir>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Hemen indir
+          </a>
+          <p class="kucuk-not">Sürüm 1.3.4 · 117 MB · Windows 10 / 11 (64 bit)</p>
+        </div>
         <ol class="kurulum">
-          <li><span>1</span>Dosyayı indir ve çalıştır.</li>
-          <li><span>2</span>Mavi uyarı çıkarsa “Ek bilgi” → “Yine de çalıştır”.</li>
-          <li><span>3</span>Hesap aç, arkadaşının davet koduyla katıl.</li>
+          <li><span>1</span><div><b>İndir ve çalıştır</b>Kanka-Kurulum.exe'yi aç.</div></li>
+          <li><span>2</span><div><b>Mavi uyarı çıkarsa</b>“Ek bilgi” → “Yine de çalıştır”.</div></li>
+          <li><span>3</span><div><b>Hesap aç</b>Arkadaşının davet koduyla katıl.</div></li>
         </ol>
       </div>
     </div>
@@ -217,7 +242,7 @@
       <h2>Sık sorulanlar</h2>
       <details><summary>Ücretli mi?</summary><p>Hayır. Kanka tamamen ücretsiz; reklam ya da abonelik yok.</p></details>
       <details><summary>Windows neden “tanınmayan uygulama” diyor?</summary><p>Kanka küçük bir ekip uygulaması ve pahalı bir kod imzalama sertifikası yok. Bu yüzden SmartScreen ilk açılışta uyarır. “Ek bilgi”ye tıklayıp “Yine de çalıştır” demen yeterli; bu sadece ilk kurulumda olur.</p></details>
-      <details><summary>Güncellemeleri nasıl alırım?</summary><p>Hiçbir şey yapmana gerek yok. Kanka açıkken arka planda yeni sürümü indirir ve “yeniden başlat” diye sorar. Sonra dersen bir dahaki kapanışta kendiliğinden kurulur.</p></details>
+      <details><summary>Güncellemeleri nasıl alırım?</summary><p>Hiçbir şey yapmana gerek yok. Kanka açıkken arka planda yeni sürümü indirir ve “yeniden başlat” diye sorar. Ayarlardaki “Güncellemeleri denetle” düğmesiyle elle de bakabilirsin.</p></details>
       <details><summary>Sesim ve görüntüm kaydediliyor mu?</summary><p>Hayır. Ses, kamera ve ekran arkadaşlarınla aranda doğrudan akar; sunucu sadece hesapları ve mesajları tutar.</p></details>
       <details><summary>Mac ya da telefonda var mı?</summary><p>Şimdilik sadece Windows. Diğer platformlar sırada.</p></details>
     </div>
@@ -226,7 +251,7 @@
 
 <footer class="alt-bilgi">
   <div class="kap alt-ic">
-    <a class="logo" href="#"><img src="img/ikon.svg" width="24" height="24" alt=""><span>Kanka</span></a>
+    <a class="logo" href="#"><img src="img/logo.png" width="30" height="30" alt=""><span>Kanka</span></a>
     <p>Bir <a href="https://spiellab.com">SpielLab</a> yapımı · © 2026</p>
   </div>
 </footer>
