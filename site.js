@@ -47,3 +47,32 @@
   }), { threshold: 0.15 });
   document.querySelectorAll(".bolum .kap > *").forEach((el) => { el.classList.add("belir"); io.observe(el); });
 })();
+
+// İmleç ışığı: masaüstünde fareyi yumuşakça izler, dokunmatikte yalnız dokunulan yerde kısa yanar
+(() => {
+  const zemin = document.querySelector(".zemin");
+  if (!zemin) return;
+  const az = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fare = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  let hx = 0, hy = 0, x = 0, y = 0, kosuyor = false, sondur;
+  const yaz = () => { zemin.style.setProperty("--x", x + "px"); zemin.style.setProperty("--y", y + "px"); };
+  function adim() {
+    x += (hx - x) * 0.18; y += (hy - y) * 0.18; yaz();
+    if (Math.abs(hx - x) + Math.abs(hy - y) > 0.5) requestAnimationFrame(adim); else { x = hx; y = hy; yaz(); kosuyor = false; }
+  }
+  function git(e, ani) {
+    hx = e.clientX; hy = e.clientY;
+    if (az || ani) { x = hx; y = hy; yaz(); return; }
+    if (!kosuyor) { kosuyor = true; requestAnimationFrame(adim); }
+  }
+  if (fare) {
+    let ilk = true;
+    addEventListener("pointermove", (e) => { if (e.pointerType !== "mouse") return; git(e, ilk); ilk = false; zemin.style.setProperty("--isik", 1); }, { passive: true });
+    document.documentElement.addEventListener("pointerleave", () => { zemin.style.setProperty("--isik", 0); ilk = true; });
+  } else {
+    addEventListener("pointerdown", (e) => {
+      git(e, true); zemin.style.setProperty("--isik", 0.8);
+      clearTimeout(sondur); sondur = setTimeout(() => zemin.style.setProperty("--isik", 0), 650);
+    }, { passive: true });
+  }
+})();
