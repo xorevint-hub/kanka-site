@@ -4,15 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kanka · Arkadaşların için sesli sohbet</title>
-<meta name="description" content="Kanka; arkadaş grupları için sesli oda, kamera, 2K 60 fps ekran paylaşımı ve yapay zekâ gürültü engelleme sunan ücretsiz Windows sohbet uygulaması.">
+<meta name="description" content="Kanka; arkadaş grupları için sesli oda, özelden sesli ve görüntülü arama, 2K 60 fps ekran paylaşımı ve yapay zekâ gürültü engelleme sunan ücretsiz Windows sohbet uygulaması.">
 <meta property="og:title" content="Kanka · Arkadaşların için sesli sohbet">
 <meta property="og:description" content="Sesli oda, 2K 60 fps ekran paylaşımı, yapay zekâ gürültü engelleme. Ücretsiz, Windows.">
 <meta property="og:image" content="https://spiellab.com/img/og.png">
-<meta name="theme-color" content="#0b0c10">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="img/ikon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="font/fontlar.css">
 <link rel="stylesheet" href="stil.css">
 </head>
 <body>
@@ -24,6 +22,7 @@
     <nav aria-label="Ana menü">
       <a href="#ses">Ses</a>
       <a href="#ekran">Ekran</a>
+      <a href="#ozel">Arama</a>
       <a href="#sunucu">Sunucular</a>
       <a href="#sss">SSS</a>
     </nav>
@@ -37,9 +36,9 @@
     <div class="parilti" aria-hidden="true"></div>
     <div class="kap hero-ic">
       <div class="hero-yazi">
-        <p class="rozet"><span class="nokta"></span> Sürüm 1.2.0 · Windows</p>
+        <p class="rozet"><span class="nokta"></span> Sürüm 1.3.2 · Windows</p>
         <h1>Ekip toplandı.<br><span class="vurgu-yazi">Kanka</span> açık.</h1>
-        <p class="giris">Arkadaş grubun için sesli oda, kamera, 2K 60 fps ekran paylaşımı ve klavye sesini bile silen yapay zekâ gürültü engelleme. Reklam yok, abonelik yok, sadece siz.</p>
+        <p class="giris">Arkadaş grubun için sesli oda, özelden sesli ve görüntülü arama, 2K 60 fps ekran paylaşımı ve klavye sesini bile silen yapay zekâ gürültü engelleme. Reklam yok, abonelik yok, sadece siz.</p>
         <div class="hero-eylem">
           <a class="dugme dugme-buyuk" href="https://152-70-184-135.sslip.io/guncelleme/Kanka-Kurulum.exe" download data-indir>
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -96,7 +95,8 @@
         <ul class="tikli">
           <li>DeepFilterNet3 modeli, tam bant 48 kHz</li>
           <li>dB eşikli ses kapısı ve engelleme gücü ayarı</li>
-          <li>Bas-konuş kısayolu ve kişi başı ses seviyesi</li>
+          <li>Bas konuş: oyun açıkken bile çalışır, farenin yan tuşları da olur</li>
+          <li>Kişi başı ses seviyesi, kalıcı olarak hatırlanır</li>
         </ul>
       </div>
       <div class="dalga-kart">
@@ -140,6 +140,32 @@
     </div>
   </section>
 
+  <!-- ÖZEL MESAJ VE ARAMA -->
+  <section class="bolum" id="ozel">
+    <div class="kap">
+      <p class="ust-baslik">Yeni · 1.3</p>
+      <h2 class="genis-baslik">Sunucuya gerek yok, özelden ara.</h2>
+      <p>Bir arkadaşınla baş başa konuşmak için oda açmana gerek yok. Özel mesaj at, tek tıkla sesli ya da görüntülü ara.</p>
+      <div class="bento-dm">
+        <article class="kart">
+          <span class="ust-etiket">Özel mesaj</span>
+          <h3>Birebir sohbet</h3>
+          <p>Görsel, dosya, tepki ve yanıt; sadece ikiniz görürsünüz.</p>
+        </article>
+        <article class="kart">
+          <span class="ust-etiket">Arama</span>
+          <h3>Sesli ve görüntülü</h3>
+          <p>Gelen arama penceresi ve zil sesi. Aramadayken kamerayı ya da ekranını aç, cevapsız aramalar kaybolmaz.</p>
+        </article>
+        <article class="kart">
+          <span class="ust-etiket">Hesap</span>
+          <h3>Profil ve kontrol</h3>
+          <p>Profil fotoğrafını koy, şifreni değiştir. Sunucu sahibi üyeyi atabilir ya da engelleyebilir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- SUNUCULAR -->
   <section class="bolum" id="sunucu">
     <div class="kap sunucu-izgara">
@@ -174,7 +200,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Hemen indir
         </a>
-        <p class="kucuk-not">Sürüm 1.2.0 · 116 MB · Windows 10 / 11 (64 bit)</p>
+        <p class="kucuk-not">Sürüm 1.3.2 · 116 MB · Windows 10 / 11 (64 bit)</p>
         <ol class="kurulum">
           <li><span>1</span>Dosyayı indir ve çalıştır.</li>
           <li><span>2</span>Mavi uyarı çıkarsa “Ek bilgi” → “Yine de çalıştır”.</li>

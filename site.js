@@ -30,7 +30,7 @@
       const g = (0.25 + 0.75 * Math.abs(Math.sin(i * 12.9898 + t * 7.3) * 43758.5453 % 1)) * orta * 0.35 * gurultu;
       c.fillStyle = "rgba(240,82,82,.75)";
       c.fillRect(x, orta - g, cubuk, g * 2 || 1);
-      c.fillStyle = "#a594ff";
+      c.fillStyle = "#ff9a4d";
       c.fillRect(x, orta - konusma / 2 - 1, cubuk, konusma + 2);
     }
     t += 0.016;
